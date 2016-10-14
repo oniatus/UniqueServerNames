@@ -1,0 +1,9 @@
+{
+    "id" : "UniqueServerNames",
+    "version" : "0.1.0-SNAPSHOT",
+    "author" : "oniatus",
+    "displayName" : "UniqueServerNames",
+    "description" : "Ensures that each player has a unique name on the server.",
+    "dependencies" : [],
+    "serverSideOnly" : false
+}

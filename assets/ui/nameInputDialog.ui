@@ -1,0 +1,55 @@
+{
+    "type": "PlaceholderScreen",
+    "contents": {
+        "type": "relativeLayout",
+        "contents": [
+            {
+                "type": "RelativeLayout",
+                "contents": [
+                    {
+                        "type": "UILabel",
+                        "id": "messageArea",
+                        "text": "Please enter a name",
+                        "layoutInfo": {
+                            "position-horizontal-center": {},
+                            "position-top": {
+                            },
+                            "position-bottom": {
+                                "widget": "nameInput",
+                                "target": "TOP"
+                            }
+                        }
+                    },
+                    {
+                        "type": "UIText",
+                        "id": "nameInput",
+                        "layoutInfo": {
+                            "position-left": {},
+                            "position-right": {},
+                            "use-content-height": true,
+                            "position-bottom": {
+                                "widget": "submitButton",
+                                "target": "TOP"
+                            }
+                        }
+                    },
+                    {
+                            "type": "UIButton",
+                            "id": "submitButton",
+                            "text": "Submit",
+                            "layoutInfo": {
+                                "use-content-height": true,
+                                "position-bottom": {}
+                            }
+                    }
+                ],
+                "layoutInfo": {
+                    "width": 300,
+                    "height": 100,
+                    "position-horizontal-center": {},
+                    "position-vertical-center": {}
+                }
+            }
+        ]
+    }
+}
