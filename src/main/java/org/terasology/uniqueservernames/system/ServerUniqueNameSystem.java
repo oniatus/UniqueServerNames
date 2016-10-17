@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.terasology.entitySystem.entity.EntityManager;
 import org.terasology.entitySystem.entity.EntityRef;
+import org.terasology.entitySystem.event.EventPriority;
 import org.terasology.entitySystem.event.ReceiveEvent;
 import org.terasology.entitySystem.systems.BaseComponentSystem;
 import org.terasology.entitySystem.systems.RegisterMode;
@@ -63,7 +64,7 @@ public class ServerUniqueNameSystem extends BaseComponentSystem {
         return entity.getComponent(KnownPlayersComponent.class);
     }
 
-    @ReceiveEvent(components = ClientComponent.class)
+    @ReceiveEvent(components = ClientComponent.class, priority = EventPriority.PRIORITY_HIGH)
     public void onConnect(ConnectedEvent event, EntityRef entity) {
         String playerId = getPlayerId(entity);
         boolean newPlayer = !knownPlayersComponent.containsId(playerId);

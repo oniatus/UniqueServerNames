@@ -11,6 +11,10 @@ public class SubmitNameEvent implements Event {
 
     private String name;
 
+    public SubmitNameEvent() {
+
+    }
+
     public SubmitNameEvent(String name) {
         this.name = name;
     }
